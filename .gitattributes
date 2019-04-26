@@ -1,0 +1,24 @@
+# auto detect line endings
+[core]
+	autocrlf = true
+
+* text=auto
+
+# code with type metadata
+*.js text diff=javascript
+*.md text diff=markdown
+*.json text diff=json
+
+# files without extensions
+LICENSE text
+.editorconfig text
+.gitattributes text
+.gitignore text
+.npmrc text
+.nvmrc text
+.prettierrc text
+.eslintrc text
+
+# don't diff these files
+package-lock.json -diff
+.idea/* -dif
