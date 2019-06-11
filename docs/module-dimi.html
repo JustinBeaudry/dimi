@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+      dimi - Documentation
+  </title>
+
+  <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+  <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+  <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+  
+
+  
+
+  <!-- start Mixpanel -->
+  <script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+  0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+  for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+  mixpanel.init("1919205b2da72e4da3b9b6639b444d59");</script>
+  <!-- end Mixpanel -->
+</head>
+
+<body>
+  <svg style="display: none;">
+    <defs>
+      <symbol id="linkIcon" fill="#706d77" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"/>
+          <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+  <label for="nav-trigger" class="navicon-button x">
+    <div class="navicon"></div>
+  </label>
+
+  <label for="nav-trigger" class="overlay"></label>
+
+  <div class="top-nav-wrapper">
+    <ul>
+      <li >
+        <a href="index.html">
+          
+            <svg fill="#6D6D6D" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+            </svg>
+          
+          
+        </a>
+      </li>
+
+      
+
+    </ul>
+  </div>
+
+  <nav>
+    <h3 class="reference-title">
+      Dimi
+    </h3>
+
+    
+
+    <h3>Modules</h3><ul><li id="dimi-nav"><a href="module-dimi.html">dimi</a><ul class='methods'><li data-type="method" id="dimi-dimi-nav"><a href="module-dimi.html#~dimi">dimi</a></li></ul></li></ul>
+  </nav>
+
+  <div id="main">
+    
+      <h1 class="page-title">
+        dimi
+      </h1>
+    
+
+    
+
+<section>
+  <header>
+    
+      
+        
+  </header>
+
+  <article>
+    <div class="container-overview">
+      
+        
+          <div class="description">
+            <p>Dimi export</p>
+          </div>
+        
+
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+  
+    <dt class="tag-version">Version:</dt>
+    <dd class="tag-version">
+      <ul class="dummy">
+        <li>
+          1.0.0
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-author">Author:</dt>
+    <dd class="tag-author">
+      <ul>
+        
+          <li>
+            <a href="mailto:me@justinbeaudry.dev">Justin Beaudry</a>
+          </li>
+        
+      </ul>
+    </dd>
+  
+
+  
+    <dt class="tag-copyright">Copyright:</dt>
+    <dd class="tag-copyright">
+      <ul class="dummy">
+        <li>
+          Justin Beaudry 2019. Licensed under Apache-2.0.
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line1">line 1</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+      <h3 class="subsection-title">Methods</h3>
+
+      
+        
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#~dimi">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="~dimi">
+      <span class="type-signature">(inner) </span>dimi<span class="signature">(level<span class="signature-attributes">opt</span>, msgFormat<span class="signature-attributes">opt</span>, serialize<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {DimiLogger}</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
+    <p>Factory function that returns a <code>DimiLogger</code> object. Dimi is a
+micro logging utility (dimi is short for diminutive) in that it provides
+a very small code base for handling logging. If you're looking for a
+fully-featured log utility check out <a href="https://%3Ca%20href=%22http://www.npmjs.com/package/pino">pino</a>">www.npmjs.com/package/pino|pino}</a>. Dimi is
+meant for those cases when Pino is too heavy handed.</p>
+  </div>
+
+
+
+
+
+
+
+  <h5>Parameters:</h5>
+  
+
+<table class="params">
+  <thead>
+    <tr>
+      
+        <th>Name</th>
+      
+
+      <th>Type</th>
+
+      
+        <th>Attributes</th>
+      
+
+      
+        <th>Default</th>
+      
+
+      <th class="last">Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>level</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      logLevel
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+          <td class="attributes">
+            
+              &lt;optional><br>
+            
+
+            
+
+            
+          </td>
+        
+
+        
+          <td class="default">
+            
+              'info'
+            
+          </td>
+        
+
+        <td class="description last">
+          <p>The log level to use
+when writing to the <a href="https://developer.mozilla.org/en-US/docs/Web/API/console">console</a>
+or stdout (in Node). Defaults to <code>info</code> if the level being passed is not
+of <code>logLevel</code>.</p>
+          
+        </td>
+      </tr>
+
+    
+      <tr>
+        
+          <td class="name"><code>msgFormat</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      messageFormatFunction
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+          <td class="attributes">
+            
+              &lt;optional><br>
+            
+
+            
+
+            
+          </td>
+        
+
+        
+          <td class="default">
+            
+              defaultMsgFormat
+            
+          </td>
+        
+
+        <td class="description last">
+          
+          
+        </td>
+      </tr>
+
+    
+      <tr>
+        
+          <td class="name"><code>serialize</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      boolean
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+          <td class="attributes">
+            
+              &lt;optional><br>
+            
+
+            
+
+            
+          </td>
+        
+
+        
+          <td class="default">
+            
+              false
+            
+          </td>
+        
+
+        <td class="description last">
+          <p>If <code>true</code> <code>dimi</code> will serialize
+<code>metadata</code> using <a href="https://%3Ca%20href=%22http://www.npmjs.com/package/json-stringify-stable">json-stringify-stable</a>">www.npmjs.com/package/json-stringify-stable|json-stringify-stable}</a> to prevent throwing
+on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#Exceptions">Circular References</a>, Otherwise, if <code>false</code> <code>metadata</code> will be
+passed as an <code>Object</code>.</p>
+          
+        </td>
+      </tr>
+
+    
+  </tbody>
+</table>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+    <dt class="tag-since">Since:</dt>
+    <dd class="tag-since">
+      <ul class="dummy">
+        <li>
+          1.0.0
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line141">line 141</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="example-container">
+    <a class="link-icon" href="#dimi-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="dimi-examples">Example</h5>
+    
+
+  <pre class="prettyprint"><code>### In Node
+```javascript
+  const dimi = require('dimi');
+  const log = dimi('info', (msg, data, level, time) => {
+    // parity the default format function
+    return `${time} [$level.toUpperCase()] - ${msg}:\n\n${data}`;
+  });
+```
+
+### In the Browser
+```javascript
+  // dimi is defined on the window
+  const log = dimi('info', (msg, data, level, time) => {
+    // parity the default format function
+    return `${time} [$level.toUpperCase()] - ${msg}:\n\n${data}`;
+  });
+```</code></pre>
+
+
+  </div>
+
+
+      
+    
+
+    
+      <h3 class="subsection-title">Type Definitions</h3>
+
+      
+          
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#~defaultMsgFormat">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="~defaultMsgFormat">
+      <span class="type-signature"></span>defaultMsgFormat<span class="type-signature"> :messageFormatFunction</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
+    <p>The default message format function that is used by <code>DimiLogger</code>.
+If a <code>messageFormatFunction</code> is passed to the <code>dimi</code> factory
+function than that <code>messageFormatFunction</code> will be used instead.</p>
+  </div>
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+    <dt class="tag-since">Since:</dt>
+    <dd class="tag-since">
+      <ul class="dummy">
+        <li>
+          1.0.0
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line124">line 124</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+          
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#~DimiLogger">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="~DimiLogger">
+      <span class="type-signature"></span>DimiLogger<span class="type-signature"> :object</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
+    <p>The log object that applications use during runtime. A <code>DimiLogger</code>
+instance only writes to the <a href="https://developer.mozilla.org/en-US/docs/Web/API/console">console</a> or <a href="https://nodejs.org/api/process.html#process_process_stdout">stdout</a> if the level
+being logged is greater than or equal to the current log level.</p>
+<p><code>DimiLogger</code> levels uses standard integers for it's log levels, e.g.:</p>
+<ul>
+<li><code>error</code> is <code>50</code></li>
+<li><code>warn</code> is <code>40</code></li>
+<li><code>info</code> is <code>30</code></li>
+<li><code>debug</code> is <code>20</code></li>
+<li><code>trace</code> is <code>10</code></li>
+</ul>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <h5 class="subsection-title">Properties:</h5>
+
+  
+
+<table class="props">
+  <thead>
+    <tr>
+      
+        <th>Name</th>
+      
+
+      <th>Type</th>
+
+      
+
+      
+
+      <th class="last">Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+
+    <tr>
+      
+        <td class="name"><code>error</code></td>
+      
+
+      <td class="type">
+        
+          
+    <span class="param-type">
+      function
+    </span>
+
+    
+
+
+        
+      </td>
+
+        
+
+        
+
+        <td class="description last">
+          <p>Log an <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>.</p>
+          </td>
+    </tr>
+
+  
+
+    <tr>
+      
+        <td class="name"><code>warn</code></td>
+      
+
+      <td class="type">
+        
+          
+    <span class="param-type">
+      function
+    </span>
+
+    
+
+
+        
+      </td>
+
+        
+
+        
+
+        <td class="description last">
+          <p>Log a warning, alias for
+<code>console.error</code>, but is typically used to signal a recoverable <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error">Error</a>
+has occurred. <a href="https://github.com/JustinBeaudry/dimi/blob/master/README.md#best-practice">Best Practice</a> for info on suggestions for logging.</p>
+          </td>
+    </tr>
+
+  
+
+    <tr>
+      
+        <td class="name"><code>info</code></td>
+      
+
+      <td class="type">
+        
+          
+    <span class="param-type">
+      function
+    </span>
+
+    
+
+
+        
+      </td>
+
+        
+
+        
+
+        <td class="description last">
+          <p>Log information, alias
+for <code>console.log</code>, typically used in applications about an event that
+took place. <a href="https://github.com/JustinBeaudry/dimi/blob/master/README.md#best-practice">Best Practice</a> for info on suggestions for logging.</p>
+          </td>
+    </tr>
+
+  
+
+    <tr>
+      
+        <td class="name"><code>debug</code></td>
+      
+
+      <td class="type">
+        
+          
+    <span class="param-type">
+      function
+    </span>
+
+    
+
+
+        
+      </td>
+
+        
+
+        
+
+        <td class="description last">
+          <p>Log debug info, alias
+for <code>console.log</code>, typically used to log info for developers.
+See <a href="https://github.com/JustinBeaudry/dimi/blob/master/README.md#best-practice">Best Practice</a> for info on suggestions for logging.</p>
+          </td>
+    </tr>
+
+  
+
+    <tr>
+      
+        <td class="name"><code>function((string,</code></td>
+      
+
+      <td class="type">
+        
+      </td>
+
+        
+
+        
+
+        <td class="description last">
+          <p>metadata): void} trace</p>
+          </td>
+    </tr>
+
+  
+
+    <tr>
+      
+        <td class="name"><code>setLogLevel</code></td>
+      
+
+      <td class="type">
+        
+          
+    <span class="param-type">
+      function
+    </span>
+
+    
+
+
+        
+      </td>
+
+        
+
+        
+
+        <td class="description last">
+          
+          </td>
+    </tr>
+
+  
+  </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+  
+
+  
+    <dt class="tag-since">Since:</dt>
+    <dd class="tag-since">
+      <ul class="dummy">
+        <li>
+          1.0.0
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line67">line 67</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+          
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#~logFunction">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="~logFunction">
+      <span class="type-signature"></span>logFunction<span class="signature">()</span><span class="type-signature"></span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
+    <p>The log function. All levels share the same function parameters:</p>
+<ul>
+<li><code>message</code> ({string}) - The message <code>string</code> to be logged.</li>
+<li><code>metadata</code> (<code>metadata</code>) - <code>Object</code></li>
+</ul>
+<p><code>logFunction</code> will not return a value but will write to the <a href="https://developer.mozilla.org/en-US/docs/Web/API/console">console</a>
+in a browser environment, or to <a href="https://nodejs.org/api/process.html#process_process_stdout">stdout</a> in Node.
+Note that <code>trace</code> uses <code>log</code> instead of their namesakes due to default
+formatting in Node and the Browser.</p>
+  </div>
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+    <dt class="tag-since">Since:</dt>
+    <dd class="tag-since">
+      <ul class="dummy">
+        <li>
+          1.0.0
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line52">line 52</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+          
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#~logLevel">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="~logLevel">
+      <span class="type-signature"></span>logLevel<span class="type-signature"> :'error'|'warn'|'info'|'debug'|'trace'</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
+    <p>Log levels supported by <code>DimiLogger</code>.</p>
+  </div>
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+    <dt class="tag-since">Since:</dt>
+    <dd class="tag-since">
+      <ul class="dummy">
+        <li>
+          1.0.0
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line133">line 133</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+          
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#~messageFormatFunction">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="~messageFormatFunction">
+      <span class="type-signature"></span>messageFormatFunction<span class="signature">()</span><span class="type-signature"></span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
+    <p>The function that formats the log message, metadata, log level, current time,
+and any other desired log outputs into a string to be written to the
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/console">console</a> in a browser environment or to <a href="https://nodejs.org/api/process.html#process_process_stdout">stdout</a> in Node. If
+<code>serialize</code> is set to <code>true</code> on the <code>DimiLogger</code> instance, than
+<code>metadata</code> will be a serialized string. Dimi uses {@npm
+json-stringify-stable} to prevent throwing on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#Exceptions">Circular References</a></p>
+<p><code>messageFormatFunction</code> is passed the following parameters (in order):</p>
+<ul>
+<li><code>message</code> The message that is being logged.</li>
+<li><code>metadata</code> The data object (or string if <code>serialize</code> is <code>true</code>).</li>
+<li><code>level</code> The level being logged at.</li>
+<li><code>time</code> The current time as an ISO8601 String. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString"><code>new Date().toISOString()</code></a></li>
+</ul>
+  </div>
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+    <dt class="tag-since">Since:</dt>
+    <dd class="tag-since">
+      <ul class="dummy">
+        <li>
+          1.0.0
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line97">line 97</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="example-container">
+    <a class="link-icon" href="#messageFormatFunction-examples">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h5 id="messageFormatFunction-examples">Example</h5>
+    
+
+  <pre class="prettyprint"><code>```javascript
+  const logFormatter = (message, metadata, level, time) => {
+     // parities <code>defaultMsgFormat</code>
+     // in this case `metadata` is a serialized string.
+     return `${time} [${level.toUpperCase()}] - ${msg}:\n\n${metadata}`;
+  };
+```</code></pre>
+
+
+  </div>
+
+
+        
+          
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#~metadata">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="~metadata">
+      <span class="type-signature"></span>metadata<span class="type-signature"> :object|array|string|number|boolean</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
+    <p>Metadata passed to a <code>logFunction</code> to be logged. Metadata is typically
+(by default if using the <code>defaultMsgFormat</code> function) serialized. If
+<code>serialized</code> is set to <code>true</code> on the <code>DimiLogger</code> instance, than
+<code>metadata</code> is serialized using <a href="https://%3Ca%20href=%22http://www.npmjs.com/package/json-stringify-stable">json-stringify-stable</a>">www.npmjs.com/package/json-stringify-stable|json-stringify-stable}</a> to prevent
+throwing on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#Exceptions">Circular References</a>.</p>
+  </div>
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+    <dt class="tag-since">Since:</dt>
+    <dd class="tag-since">
+      <ul class="dummy">
+        <li>
+          1.0.0
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line41">line 41</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+    
+  </article>
+</section>
+
+
+
+
+  </div>
+
+  <br class="clear">
+
+  <footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
+  </footer>
+
+  <script src="scripts/linenumber.js"></script>
+  <script src="scripts/pagelocation.js"></script>
+
+  
+
+</body>
+</html>

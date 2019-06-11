@@ -32,9 +32,9 @@
     "rollup-plugin-node-resolve": "4.0.1",
     "rollup-plugin-uglify": "6.0.2"
   },
-	"scripts": {
-		"build:docs": "npx .jsdoc.js -c .jsdoc.js"
-	},
+  "scripts": {
+    "build:docs": "npx jsdoc -c .jsdoc.js"
+  },
   "files": [
     "lib"
   ],

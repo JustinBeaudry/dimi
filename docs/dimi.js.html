@@ -75,7 +75,7 @@
 
     
 
-    <h3 id="global-nav">Global</h3><ul><li><a href="global.html#dimi">dimi</a></li></ul>
+    <h3>Modules</h3><ul><li id="dimi-nav"><a href="module-dimi.html">dimi</a><ul class='methods'><li data-type="method" id="dimi-dimi-nav"><a href="module-dimi.html#~dimi">dimi</a></li></ul></li></ul>
   </nav>
 
   <div id="main">
@@ -90,7 +90,16 @@
 
 <section>
   <article>
-    <pre class="prettyprint source linenums"><code>const stringify = require('json-stringify-stable');
+    <pre class="prettyprint source linenums"><code>/**
+ *
+ * @author Justin Beaudry &lt;me@justinbeaudry.dev>
+ * @file Dimi export
+ * @module dimi
+ * @version 1.0.0
+ * @copyright Justin Beaudry 2019. Licensed under Apache-2.0.
+ *
+ */
+const stringify = require('json-stringify-stable');
 const utils = require('./utils');
 const arrayToObject = utils.arrayToObject;
 const time = utils.time;
