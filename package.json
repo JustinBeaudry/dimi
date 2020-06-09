@@ -37,7 +37,7 @@
     "build:docs": "npx jsdoc -c .jsdoc.js",
     "build:dist": "npx rollup -c rollup.config.js",
     "clean": "rm -rf dist",
-    "build": "npm run clean && npm run build:dist"
+    "build": "npm run clean && npm run build:dist ; npm run build:docs"
   },
   "files": [
     "lib",

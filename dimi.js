@@ -25,7 +25,7 @@ const arrayToObject = array => array.reduce((memo, datum) => {
  */
 const defaultMsgFormat = (msg, metadata, level, time) => {
 	const msgPrefix = `${time} [${level.toUpperCase()}]`;
-	const msgPostfix = Object.keys(metadata).length > 0 ? `: ${metadata}` : '';
+	const msgPostfix = (Object.keys(metadata).length > 0 || Array.isArray(metadata) && metadata.length > 0) ? `: ${metadata}` : '';
 	return `${msgPrefix} - ${msg}:${msgPostfix}`;
 };
 /**
