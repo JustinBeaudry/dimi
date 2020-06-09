@@ -34,7 +34,8 @@
     "rollup-plugin-uglify": "6.0.4"
   },
   "scripts": {
-    "build:docs": "npx jsdoc -c .jsdoc.js"
+    "build:docs": "npx jsdoc -c .jsdoc.js",
+		"build": "npx rollup -c rollup.config.js"
   },
   "files": [
     "lib"
