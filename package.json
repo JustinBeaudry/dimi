@@ -1,6 +1,6 @@
 {
   "name": "dimi",
-  "version": "4.1.2",
+  "version": "4.1.3",
   "description": "Dimi is a micro logger utility for Node and the Browser.",
   "license": "Apache-2.0",
   "author": {
