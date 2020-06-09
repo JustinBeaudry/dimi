@@ -849,7 +849,7 @@ var Dimi = (function () {
 	const { arrayToObject: arrayToObject$1, time: time$1 } = utils;
 	const defaultMsgFormat = (msg, metadata, level, time) => {
 		const msgPrefix = `${time} [${level.toUpperCase()}]`;
-		const msgPostfix = Object.keys(data).length > 0 ? `: ${metadata}` : '';
+		const msgPostfix = Object.keys(metadata).length > 0 ? `: ${metadata}` : '';
 		return `${msgPrefix} - ${msg}:${msgPostfix}`;
 	};
 	const levels = Object.freeze({
@@ -864,7 +864,7 @@ var Dimi = (function () {
 				if (levels[logLevel] >= level) {
 					let metadata = arrayToObject$1(Array.prototype.slice.call(arguments, 1));
 					let msg = msgFormat(
-						argument[0],
+						arguments[0],
 						serialize ? stringify_1(metadata, null, 2) : metadata,
 						logLevel,
 						time$1()
