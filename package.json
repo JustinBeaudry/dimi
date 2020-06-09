@@ -30,7 +30,8 @@
     "jsdoc-plugin-url": "1.x.x",
     "livereload": "0.x.x",
     "nodemon": "2.x.x",
-    "rollup": "2.x.x"
+    "rollup": "2.x.x",
+    "rollup-plugin-cleanup": "3.1.1"
   },
   "scripts": {
     "build:docs": "npx jsdoc -c .jsdoc.js",
