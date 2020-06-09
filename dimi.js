@@ -26,7 +26,8 @@ const time = () => new Date().toISOString();
  * @returns {object}
  */
 const arrayToObject = array => array.reduce((memo, datum) => {
-	return Object.assign({}, memo, Array.isArray(datum) ? arrayToObject(datum) : datum);
+	Object.assign(memo, Array.isArray(datum) ? arrayToObject(datum) : datum)
+	return memo;
 }, {});
 /**
  * @type {defaultMsgFormat}
