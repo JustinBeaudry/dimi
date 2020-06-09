@@ -75,7 +75,7 @@
 
     
 
-    <h3>Modules</h3><ul><li id="dimi-nav"><a href="module-dimi.html">dimi</a><ul class='methods'><li data-type="method" id="dimi-arrayToObject-nav"><a href="module-dimi.html#~arrayToObject">arrayToObject</a></li><li data-type="method" id="dimi-dimi-nav"><a href="module-dimi.html#~dimi">dimi</a></li><li data-type="method" id="dimi-time-nav"><a href="module-dimi.html#~time">time</a></li></ul></li></ul>
+    <h3>Modules</h3><ul><li id="dimi-nav"><a href="module-dimi.html">dimi</a><ul class='methods'><li data-type="method" id="dimi-arrayToObject-nav"><a href="module-dimi.html#~arrayToObject">arrayToObject</a></li><li data-type="method" id="dimi-dimi-nav"><a href="module-dimi.html#~dimi">dimi</a></li></ul></li></ul>
   </nav>
 
   <div id="main">
@@ -95,19 +95,10 @@
  * @author Justin Beaudry &lt;me@justinbeaudry.dev>
  * @file Dimi
  * @module dimi
- * @version 4.0.4
+ * @version 4.1.0
  * @copyright Justin Beaudry 2020. Licensed under Apache-2.0.
  *
  */
-const stringify = require('json-stringify-safe');
-/**
- * Returns the current time as an ISO8601 string.
- *
- * @function time
- * @since 1.0.0
- * @returns {string}
- */
-const time = () => new Date().toISOString();
 /**
  * Recursively converts an array into an object by reducing the array and
  * using {@link https://lodash.com/docs/4.17.11#merge|lodash.merge} on the Object.
@@ -118,7 +109,8 @@ const time = () => new Date().toISOString();
  * @returns {object}
  */
 const arrayToObject = array => array.reduce((memo, datum) => {
-	return Object.assign({}, memo, Array.isArray(datum) ? arrayToObject(datum) : datum);
+	Object.assign(memo, Array.isArray(datum) ? arrayToObject(datum) : datum)
+	return memo;
 }, {});
 /**
  * @type {defaultMsgFormat}
@@ -299,13 +291,21 @@ const dimi = (level, msgFormat, serialize) => {
 			if (levels[logLevel] >= level) {
 				// converts an arguments array into an Array and then merges objects
 				// passed into a single object to be serialized.
-				let metadata = arrayToObject(Array.prototype.slice.call(arguments, 1));
+				let __metadata = arrayToObject(Array.prototype.slice.call(arguments, 1));
 				// format the message into a string
+				let metadata;
+				if (!serialize) {
+					metadata = __metadata;
+				} else {
+					try {
+						metadata = JSON.stringify(__metadata, null, 2);
+					} catch(err) {}
+				}
 				let msg = msgFormat(
 					arguments[0],
-					serialize ? stringify(metadata, null, 2) : metadata,
+					metadata,
 					logLevel,
-					time()
+					new Date().toISOString()
 				);
 				let write = console[logLevel];
 				// trace in Node and the Browser is used to log stack traces
