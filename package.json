@@ -38,7 +38,8 @@
     "build": "npx rollup -c rollup.config.js"
   },
   "files": [
-    "lib"
+    "lib",
+		"dist"
   ],
   "keywords": [
     "logging",
