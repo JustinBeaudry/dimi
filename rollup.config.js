@@ -10,8 +10,6 @@ export default {
 	},
 	plugins: [
 		resolve(),
-		commonjs({
-			include: 'node_modules/**/*.js'
-		})
+		commonjs()
 	]
 };

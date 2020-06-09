@@ -34,7 +34,9 @@
   },
   "scripts": {
     "build:docs": "npx jsdoc -c .jsdoc.js",
-    "build": "npx rollup -c rollup.config.js"
+		"build:dist": "npx rollup -c rollup.config.js",
+		"clean": "rm -rf dist",
+    "build": "npm run clean && npm run build:dist"
   },
   "files": [
     "lib",
