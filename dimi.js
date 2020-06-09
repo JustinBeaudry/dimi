@@ -1,14 +1,33 @@
 /**
  *
  * @author Justin Beaudry <me@justinbeaudry.dev>
- * @file Dimi export
+ * @file Dimi
  * @module dimi
- * @version 1.0.0
- * @copyright Justin Beaudry 2019. Licensed under Apache-2.0.
+ * @version 4.0.4
+ * @copyright Justin Beaudry 2020. Licensed under Apache-2.0.
  *
  */
 const stringify = require('json-stringify-safe');
-const { arrayToObject, time } = require('./utils');
+/**
+ * Returns the current time as an ISO8601 string.
+ *
+ * @function time
+ * @since 1.0.0
+ * @returns {string}
+ */
+const time = () => new Date().toISOString();
+/**
+ * Recursively converts an array into an object by reducing the array and
+ * using {@link https://lodash.com/docs/4.17.11#merge|lodash.merge} on the Object.
+ *
+ * @function arrayToObject
+ * @since 1.0.0
+ * @param {Array<*>} array
+ * @returns {object}
+ */
+const arrayToObject = array => array.reduce((memo, datum) => {
+	return Object.assign({}, memo, Array.isArray(datum) ? arrayToObject(datum) : datum);
+}, {});
 /**
  * @type {defaultMsgFormat}
  * @returns {string}

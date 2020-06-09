@@ -73,7 +73,7 @@
 
     
 
-    <h3>Modules</h3><ul><li id="dimi-nav"><a href="module-dimi.html">dimi</a><ul class='methods'><li data-type="method" id="dimi-dimi-nav"><a href="module-dimi.html#~dimi">dimi</a></li></ul></li></ul>
+    <h3>Modules</h3><ul><li id="dimi-nav"><a href="module-dimi.html">dimi</a><ul class='methods'><li data-type="method" id="dimi-arrayToObject-nav"><a href="module-dimi.html#~arrayToObject">arrayToObject</a></li><li data-type="method" id="dimi-dimi-nav"><a href="module-dimi.html#~dimi">dimi</a></li><li data-type="method" id="dimi-time-nav"><a href="module-dimi.html#~time">time</a></li></ul></li></ul>
   </nav>
 
   <div id="main">
@@ -97,7 +97,7 @@
       
         
           <div class="description">
-            <p>Dimi export</p>
+            <p>Dimi</p>
           </div>
         
 
@@ -123,7 +123,7 @@
     <dd class="tag-version">
       <ul class="dummy">
         <li>
-          1.0.0
+          4.0.4
         </li>
       </ul>
     </dd>
@@ -161,7 +161,7 @@
     <dd class="tag-copyright">
       <ul class="dummy">
         <li>
-          Justin Beaudry 2019. Licensed under Apache-2.0.
+          Justin Beaudry 2020. Licensed under Apache-2.0.
         </li>
       </ul>
     </dd>
@@ -228,6 +228,162 @@
   
 
   <span class='name-container'>
+    <a class="link-icon" href="#~arrayToObject">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="~arrayToObject">
+      <span class="type-signature">(inner) </span>arrayToObject<span class="signature">(array)</span><span class="type-signature"> &rarr; {object}</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
+    <p>Recursively converts an array into an object by reducing the array and
+using <a href="https://lodash.com/docs/4.17.11#merge">lodash.merge</a> on the Object.</p>
+  </div>
+
+
+
+
+
+
+
+  <h5>Parameters:</h5>
+  
+
+<table class="params">
+  <thead>
+    <tr>
+      
+        <th>Name</th>
+      
+
+      <th>Type</th>
+
+      
+
+      
+
+      <th class="last">Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>array</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      Array.&lt;*>
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+
+        
+
+        <td class="description last">
+          
+          
+        </td>
+      </tr>
+
+    
+  </tbody>
+</table>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+    <dt class="tag-since">Since:</dt>
+    <dd class="tag-since">
+      <ul class="dummy">
+        <li>
+          1.0.0
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line19">line 19</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+        
+
+
+  
+
+  <span class='name-container'>
     <a class="link-icon" href="#~dimi">
       <svg height="20" width="20" style="fill: black;">
         <use xlink:href="#linkIcon"></use>
@@ -246,7 +402,7 @@
     <p>Factory function that returns a <code>DimiLogger</code> object. Dimi is a
 micro logging utility (dimi is short for diminutive) in that it provides
 a very small code base for handling logging. If you're looking for a
-fully-featured log utility check out <a href="https://%3Ca%20href=%22http://www.npmjs.com/package/pino">pino</a>">www.npmjs.com/package/pino|pino}</a>. Dimi is
+fully-featured log utility check out <a href="https://www.npmjs.com/package/pino">pino</a>. Dimi is
 meant for those cases when Pino is too heavy handed.</p>
   </div>
 
@@ -415,7 +571,7 @@ of <code>logLevel</code>.</p>
 
         <td class="description last">
           <p>If <code>true</code> <code>dimi</code> will serialize
-<code>metadata</code> using <a href="https://%3Ca%20href=%22http://www.npmjs.com/package/json-stringify-stable">json-stringify-stable</a>">www.npmjs.com/package/json-stringify-stable|json-stringify-stable}</a> to prevent throwing
+<code>metadata</code> using <a href="https://www.npmjs.com/package/json-stringify-stable">json-stringify-stable</a> to prevent throwing
 on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#Exceptions">Circular References</a>, Otherwise, if <code>false</code> <code>metadata</code> will be
 passed as an <code>Object</code>.</p>
           
@@ -470,7 +626,7 @@ passed as an <code>Object</code>.</p>
     <dd class="tag-source">
       <ul class="dummy">
         <li>
-          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line141">line 141</a>
+          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line158">line 158</a>
         </li>
       </ul>
     </dd>
@@ -524,6 +680,106 @@ passed as an <code>Object</code>.</p>
 
 
   </div>
+
+
+      
+        
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#~time">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="~time">
+      <span class="type-signature">(inner) </span>time<span class="signature">()</span><span class="type-signature"> &rarr; {string}</span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
+    <p>Returns the current time as an ISO8601 string.</p>
+  </div>
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+    <dt class="tag-since">Since:</dt>
+    <dd class="tag-since">
+      <ul class="dummy">
+        <li>
+          1.0.0
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line11">line 11</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
       
@@ -608,7 +864,7 @@ function than that <code>messageFormatFunction</code> will be used instead.</p>
     <dd class="tag-source">
       <ul class="dummy">
         <li>
-          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line124">line 124</a>
+          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line141">line 141</a>
         </li>
       </ul>
     </dd>
@@ -918,7 +1174,7 @@ See <a href="https://github.com/JustinBeaudry/dimi/blob/master/README.md#best-pr
     <dd class="tag-source">
       <ul class="dummy">
         <li>
-          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line67">line 67</a>
+          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line84">line 84</a>
         </li>
       </ul>
     </dd>
@@ -1026,7 +1282,7 @@ formatting in Node and the Browser.</p>
     <dd class="tag-source">
       <ul class="dummy">
         <li>
-          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line52">line 52</a>
+          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line69">line 69</a>
         </li>
       </ul>
     </dd>
@@ -1126,7 +1382,7 @@ formatting in Node and the Browser.</p>
     <dd class="tag-source">
       <ul class="dummy">
         <li>
-          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line133">line 133</a>
+          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line150">line 150</a>
         </li>
       </ul>
     </dd>
@@ -1238,7 +1494,7 @@ json-stringify-stable} to prevent throwing on <a href="https://developer.mozilla
     <dd class="tag-source">
       <ul class="dummy">
         <li>
-          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line97">line 97</a>
+          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line114">line 114</a>
         </li>
       </ul>
     </dd>
@@ -1309,7 +1565,7 @@ json-stringify-stable} to prevent throwing on <a href="https://developer.mozilla
     <p>Metadata passed to a <code>logFunction</code> to be logged. Metadata is typically
 (by default if using the <code>defaultMsgFormat</code> function) serialized. If
 <code>serialized</code> is set to <code>true</code> on the <code>DimiLogger</code> instance, than
-<code>metadata</code> is serialized using <a href="https://%3Ca%20href=%22http://www.npmjs.com/package/json-stringify-stable">json-stringify-stable</a>">www.npmjs.com/package/json-stringify-stable|json-stringify-stable}</a> to prevent
+<code>metadata</code> is serialized using <a href="https://www.npmjs.com/package/json-stringify-stable">json-stringify-stable</a> to prevent
 throwing on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#Exceptions">Circular References</a>.</p>
   </div>
 
@@ -1362,7 +1618,7 @@ throwing on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Ref
     <dd class="tag-source">
       <ul class="dummy">
         <li>
-          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line41">line 41</a>
+          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line58">line 58</a>
         </li>
       </ul>
     </dd>
@@ -1402,7 +1658,7 @@ throwing on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Ref
   <br class="clear">
 
   <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a>
   </footer>
 
   <script src="scripts/linenumber.js"></script>

@@ -3,7 +3,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import cleanup from 'rollup-plugin-cleanup';
 
 export default {
-	input: './lib/dimi.js',
+	input: './dimi.js',
 	output: {
 		name: 'Dimi',
 		file: 'dist/dimi.js',

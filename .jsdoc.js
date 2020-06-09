@@ -7,7 +7,7 @@ module.exports = {
 	],
 	source: {
 		include: [
-			'lib/dimi.js'
+			'dimi.js'
 		]
 	},
 	templates: {
