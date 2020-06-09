@@ -7,7 +7,7 @@ var Dimi = (function () {
 	}, {});
 	const defaultMsgFormat = (msg, metadata, level, time) => {
 		const msgPrefix = `${time} [${level.toUpperCase()}]`;
-		const msgPostfix = (Object.keys(metadata).length > 0 || Array.isArray(metadata) && metadata.length > 0) ? `: ${metadata}` : '';
+		const msgPostfix = Object.keys(metadata).length > 0 ? `: ${metadata}` : '';
 		return `${msgPrefix} - ${msg}:${msgPostfix}`;
 	};
 	const levels = Object.freeze({
@@ -22,7 +22,7 @@ var Dimi = (function () {
 				if (levels[logLevel] >= level) {
 					let __metadata = arrayToObject(Array.prototype.slice.call(arguments, 1));
 					let metadata;
-					if (!serialize) {
+					if (!serialize || Object.keys(__metadata).length === 0) {
 						metadata = __metadata;
 					} else {
 						try {
