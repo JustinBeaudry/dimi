@@ -13,7 +13,7 @@ var Dimi = (function () {
 	const levels = Object.freeze({
 		error: 50, warn:  40, info:  30, debug: 20, trace: 10
 	});
-	const dimi = (level, msgFormat, serialize) => {
+	const dimi = (level, msgFormat, serialize = true) => {
 		level = levels[level] || levels.info;
 		serialize = serialize === true;
 		msgFormat = typeof msgFormat === 'function' ? msgFormat : defaultMsgFormat;

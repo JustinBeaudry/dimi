@@ -182,10 +182,10 @@
 
 
   <div class="description">
-    <p>Factory function that returns a <a href="global.html#DimiLogger">DimiLogger</a> object. Dimi is a
+    <p>Factory function that returns a <a href="global.html#DimiLogger"><code>DimiLogger</code></a> object. Dimi is a
 micro logging utility (dimi is short for diminutive) in that it provides
 a very small code base for handling logging. If you're looking for a
-fully-featured log utility check out <a href="https://%3Ca%20href=%22http://www.npmjs.com/package/pino">pino</a>">www.npmjs.com/package/pino|pino}</a>. Dimi is
+fully-featured log utility check out <a href="https://www.npmjs.com/package/pino">pino</a>. Dimi is
 meant for those cases when Pino is too heavy handed.</p>
   </div>
 
@@ -263,7 +263,7 @@ meant for those cases when Pino is too heavy handed.</p>
           <p>The log level to use
 when writing to the <a href="https://developer.mozilla.org/en-US/docs/Web/API/console">console</a>
 or stdout (in Node). Defaults to <code>info</code> if the level being passed is not
-of <a href="global.html#logLevel">logLevel</a>.</p>
+of <a href="global.html#logLevel"><code>logLevel</code></a>.</p>
           
         </td>
       </tr>
@@ -347,16 +347,15 @@ of <a href="global.html#logLevel">logLevel</a>.</p>
         
           <td class="default">
             
-              false
+              true
             
           </td>
         
 
         <td class="description last">
           <p>If <code>true</code> <code>dimi</code> will serialize
-<a href="global.html#metadata">metadata</a> using <a href="https://%3Ca%20href=%22http://www.npmjs.com/package/json-stringify-stable">json-stringify-stable</a>">www.npmjs.com/package/json-stringify-stable|json-stringify-stable}</a> to prevent throwing
-on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#Exceptions">Circular References</a>, Otherwise, if <code>false</code> <a href="global.html#metadata">metadata</a> will be
-passed as an <code>Object</code>.</p>
+<a href="global.html#metadata"><code>metadata</code></a>. If an error occurs during serialization the metadata will
+not be logged.</p>
           
         </td>
       </tr>
@@ -409,7 +408,7 @@ passed as an <code>Object</code>.</p>
     <dd class="tag-source">
       <ul class="dummy">
         <li>
-          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line132">line 132</a>
+          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line146">line 146</a>
         </li>
       </ul>
     </dd>
@@ -455,7 +454,7 @@ passed as an <code>Object</code>.</p>
 ### In the Browser
 ```javascript
   // dimi is defined on the window
-  const log = dimi('info', (msg, data, level, time) => {
+  const log = Dimi('info', (msg, data, level, time) => {
     // parity the default format function
     return `${time} [$level.toUpperCase()] - ${msg}:\n\n${data}`;
   });
@@ -493,9 +492,9 @@ passed as an <code>Object</code>.</p>
 
 
   <div class="description">
-    <p>The default message format function that is used by <a href="global.html#DimiLogger">DimiLogger</a>.
-If a <a href="global.html#messageFormatFunction">messageFormatFunction</a> is passed to the <a href="global.html#dimi">dimi</a> factory
-function than that <a href="global.html#messageFormatFunction">messageFormatFunction</a> will be used instead.</p>
+    <p>The default message format function that is used by <a href="global.html#DimiLogger"><code>DimiLogger</code></a>.
+If a <a href="global.html#messageFormatFunction"><code>messageFormatFunction</code></a> is passed to the <a href="global.html#dimi"><code>dimi</code></a> factory
+function than that <a href="global.html#messageFormatFunction"><code>messageFormatFunction</code></a> will be used instead.</p>
   </div>
 
 
@@ -547,7 +546,7 @@ function than that <a href="global.html#messageFormatFunction">messageFormatFunc
     <dd class="tag-source">
       <ul class="dummy">
         <li>
-          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line115">line 115</a>
+          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line129">line 129</a>
         </li>
       </ul>
     </dd>
@@ -857,7 +856,7 @@ See <a href="https://github.com/JustinBeaudry/dimi/blob/master/README.md#best-pr
     <dd class="tag-source">
       <ul class="dummy">
         <li>
-          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line58">line 58</a>
+          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line73">line 73</a>
         </li>
       </ul>
     </dd>
@@ -908,7 +907,7 @@ See <a href="https://github.com/JustinBeaudry/dimi/blob/master/README.md#best-pr
     <p>The log function. All levels share the same function parameters:</p>
 <ul>
 <li><code>message</code> ({string}) - The message <code>string</code> to be logged.</li>
-<li><code>metadata</code> (<a href="global.html#metadata">metadata</a>) - <code>Object</code></li>
+<li><code>metadata</code> (<a href="global.html#metadata"><code>metadata</code></a>) - <code>Object</code></li>
 </ul>
 <p><code>logFunction</code> will not return a value but will write to the <a href="https://developer.mozilla.org/en-US/docs/Web/API/console">console</a>
 in a browser environment, or to <a href="https://nodejs.org/api/process.html#process_process_stdout">stdout</a> in Node.
@@ -965,7 +964,7 @@ formatting in Node and the Browser.</p>
     <dd class="tag-source">
       <ul class="dummy">
         <li>
-          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line43">line 43</a>
+          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line58">line 58</a>
         </li>
       </ul>
     </dd>
@@ -1013,7 +1012,7 @@ formatting in Node and the Browser.</p>
 
 
   <div class="description">
-    <p>Log levels supported by <a href="global.html#DimiLogger">DimiLogger</a>.</p>
+    <p>Log levels supported by <a href="global.html#DimiLogger"><code>DimiLogger</code></a>.</p>
   </div>
 
 
@@ -1065,7 +1064,7 @@ formatting in Node and the Browser.</p>
     <dd class="tag-source">
       <ul class="dummy">
         <li>
-          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line124">line 124</a>
+          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line138">line 138</a>
         </li>
       </ul>
     </dd>
@@ -1116,9 +1115,8 @@ formatting in Node and the Browser.</p>
     <p>The function that formats the log message, metadata, log level, current time,
 and any other desired log outputs into a string to be written to the
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/console">console</a> in a browser environment or to <a href="https://nodejs.org/api/process.html#process_process_stdout">stdout</a> in Node. If
-<code>serialize</code> is set to <code>true</code> on the <a href="global.html#DimiLogger">DimiLogger</a> instance, than
-<code>metadata</code> will be a serialized string. Dimi uses {@npm
-json-stringify-stable} to prevent throwing on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#Exceptions">Circular References</a></p>
+<code>serialize</code> is set to <code>true</code> on the <a href="global.html#DimiLogger"><code>DimiLogger</code></a> instance, than
+<code>metadata</code> will be a serialized string.</p>
 <p><code>messageFormatFunction</code> is passed the following parameters (in order):</p>
 <ul>
 <li><code>message</code> The message that is being logged.</li>
@@ -1177,7 +1175,7 @@ json-stringify-stable} to prevent throwing on <a href="https://developer.mozilla
     <dd class="tag-source">
       <ul class="dummy">
         <li>
-          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line88">line 88</a>
+          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line103">line 103</a>
         </li>
       </ul>
     </dd>
@@ -1213,7 +1211,7 @@ json-stringify-stable} to prevent throwing on <a href="https://developer.mozilla
 
   <pre class="prettyprint"><code>```javascript
   const logFormatter = (message, metadata, level, time) => {
-     // parities <a href="global.html#defaultMsgFormat">defaultMsgFormat</a>
+     // parities <a href="global.html#defaultMsgFormat"><code>defaultMsgFormat</code></a>
      // in this case `metadata` is a serialized string.
      return `${time} [${level.toUpperCase()}] - ${msg}:\n\n${metadata}`;
   };
@@ -1245,11 +1243,10 @@ json-stringify-stable} to prevent throwing on <a href="https://developer.mozilla
 
 
   <div class="description">
-    <p>Metadata passed to a <a href="global.html#logFunction">logFunction</a> to be logged. Metadata is typically
-(by default if using the <a href="global.html#defaultMsgFormat">defaultMsgFormat</a> function) serialized. If
-<code>serialized</code> is set to <code>true</code> on the <a href="global.html#DimiLogger">DimiLogger</a> instance, than
-<code>metadata</code> is serialized using <a href="https://%3Ca%20href=%22http://www.npmjs.com/package/json-stringify-stable">json-stringify-stable</a>">www.npmjs.com/package/json-stringify-stable|json-stringify-stable}</a> to prevent
-throwing on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#Exceptions">Circular References</a>.</p>
+    <p>Metadata passed to a <a href="global.html#logFunction"><code>logFunction</code></a> to be logged. Metadata is typically
+(by default if using the <a href="global.html#defaultMsgFormat"><code>defaultMsgFormat</code></a> function) serialized. If
+<code>serialized</code> is set to <code>true</code> on the <a href="global.html#DimiLogger"><code>DimiLogger</code></a> instance, than
+<code>metadata</code> is serialized.</p>
   </div>
 
 
@@ -1301,7 +1298,7 @@ throwing on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Ref
     <dd class="tag-source">
       <ul class="dummy">
         <li>
-          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line32">line 32</a>
+          <a href="dimi.js.html">dimi.js</a>, <a href="dimi.js.html#line48">line 48</a>
         </li>
       </ul>
     </dd>
@@ -1341,7 +1338,7 @@ throwing on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Ref
   <br class="clear">
 
   <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a>
   </footer>
 
   <script src="scripts/linenumber.js"></script>

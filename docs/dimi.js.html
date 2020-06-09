@@ -75,7 +75,7 @@
 
     
 
-    <h3>Modules</h3><ul><li id="dimi-nav"><a href="module-dimi.html">dimi</a><ul class='methods'><li data-type="method" id="dimi-dimi-nav"><a href="module-dimi.html#~dimi">dimi</a></li></ul></li></ul>
+    <h3 id="global-nav">Global</h3><ul><li><a href="global.html#dimi">dimi</a></li></ul>
   </nav>
 
   <div id="main">
@@ -93,15 +93,12 @@
     <pre class="prettyprint source linenums"><code>/**
  *
  * @author Justin Beaudry &lt;me@justinbeaudry.dev>
- * @file Dimi
- * @module dimi
  * @version 4.1.0
  * @copyright Justin Beaudry 2020. Licensed under Apache-2.0.
  *
  */
 /**
- * Recursively converts an array into an object by reducing the array and
- * using {@link https://lodash.com/docs/4.17.11#merge|lodash.merge} on the Object.
+ * Recursively converts an array into an object.
  *
  * @function arrayToObject
  * @since 1.0.0
@@ -144,8 +141,7 @@ const levels = Object.freeze({
  * Metadata passed to a {@link logFunction} to be logged. Metadata is typically
  * (by default if using the {@link defaultMsgFormat} function) serialized. If
  * `serialized` is set to `true` on the {@link DimiLogger} instance, than
- * `metadata` is serialized using {@npm json-stringify-stable} to prevent
- * throwing on {@url circularRefs}.
+ * `metadata` is serialized.
  *
  * @typedef metadata
  * @typedef {(object|array|string|number|boolean)}
@@ -201,8 +197,7 @@ const levels = Object.freeze({
  * and any other desired log outputs into a string to be written to the
  * {@url console} in a browser environment or to {@url stdout} in Node. If
  * `serialize` is set to `true` on the {@link DimiLogger} instance, than
- * `metadata` will be a serialized string. Dimi uses {@npm
- * json-stringify-stable} to prevent throwing on {@url circularRefs}
+ * `metadata` will be a serialized string.
  *
  * `messageFormatFunction` is passed the following parameters (in order):
  *
@@ -254,10 +249,9 @@ const levels = Object.freeze({
  * or stdout (in Node). Defaults to `info` if the level being passed is not
  * of {@link logLevel}.
  * @param {messageFormatFunction} [msgFormat=defaultMsgFormat]
- * @param {boolean} [serialize=false] - If `true` `dimi` will serialize
- * {@link metadata} using {@npm json-stringify-stable} to prevent throwing
- * on {@url circularRefs}, Otherwise, if `false` {@link metadata} will be
- * passed as an `Object`.
+ * @param {boolean} [serialize=true] - If `true` `dimi` will serialize
+ * {@link metadata}. If an error occurs during serialization the metadata will
+ * not be logged.
  *
  * @returns {DimiLogger}
  * @example
@@ -274,13 +268,13 @@ const levels = Object.freeze({
  * ### In the Browser
  * ```javascript
  *   // dimi is defined on the window
- *   const log = dimi('info', (msg, data, level, time) => {
+ *   const log = Dimi('info', (msg, data, level, time) => {
  *     // parity the default format function
  *     return `${time} [$level.toUpperCase()] - ${msg}:\n\n${data}`;
  *   });
  * ```
  */
-const dimi = (level, msgFormat, serialize) => {
+const dimi = (level, msgFormat, serialize = true) => {
 	level = levels[level] || levels.info;
 	serialize = serialize === true;
 	msgFormat = typeof msgFormat === 'function' ? msgFormat : defaultMsgFormat;
