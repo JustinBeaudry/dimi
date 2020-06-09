@@ -3,7 +3,7 @@
  * @author Justin Beaudry <me@justinbeaudry.dev>
  * @file Dimi
  * @module dimi
- * @version 4.0.4
+ * @version 4.1.0
  * @copyright Justin Beaudry 2020. Licensed under Apache-2.0.
  *
  */
