@@ -23,15 +23,15 @@
   },
   "devDependencies": {
     "braintree-jsdoc-template": "3.3.0",
-    "jsdoc": "3.5.5",
+    "jsdoc": "3.6.4",
     "jsdoc-plugin-npm": "1.x.x",
     "jsdoc-plugin-url": "1.x.x",
-    "livereload": "0.7.0",
+    "livereload": "0.9.1",
     "nodemon": "1.18.10",
     "rollup": "1.6.0",
     "rollup-plugin-commonjs": "9.2.1",
     "rollup-plugin-node-resolve": "4.0.1",
-    "rollup-plugin-uglify": "6.0.2"
+    "rollup-plugin-uglify": "6.0.4"
   },
   "scripts": {
     "build:docs": "npx jsdoc -c .jsdoc.js"
@@ -49,4 +49,3 @@
     "bunyan"
   ]
 }
-
