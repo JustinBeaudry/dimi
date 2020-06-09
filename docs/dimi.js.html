@@ -75,7 +75,7 @@
 
     
 
-    <h3>Modules</h3><ul><li id="dimi-nav"><a href="module-dimi.html">dimi</a><ul class='methods'><li data-type="method" id="dimi-arrayToObject-nav"><a href="module-dimi.html#~arrayToObject">arrayToObject</a></li><li data-type="method" id="dimi-dimi-nav"><a href="module-dimi.html#~dimi">dimi</a></li></ul></li></ul>
+    <h3>Modules</h3><ul><li id="dimi-nav"><a href="module-dimi.html">dimi</a><ul class='methods'><li data-type="method" id="dimi-dimi-nav"><a href="module-dimi.html#~dimi">dimi</a></li></ul></li></ul>
   </nav>
 
   <div id="main">
@@ -107,6 +107,7 @@
  * @since 1.0.0
  * @param {Array&lt;*>} array
  * @returns {object}
+ * @private
  */
 const arrayToObject = array => array.reduce((memo, datum) => {
 	Object.assign(memo, Array.isArray(datum) ? arrayToObject(datum) : datum)
