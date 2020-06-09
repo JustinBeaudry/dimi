@@ -1,6 +1,6 @@
 {
   "name": "dimi",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Dimi is a micro logger utility for Node and the Browser.",
   "license": "Apache-2.0",
   "author": {
@@ -35,7 +35,7 @@
   },
   "scripts": {
     "build:docs": "npx jsdoc -c .jsdoc.js",
-		"build": "npx rollup -c rollup.config.js"
+    "build": "npx rollup -c rollup.config.js"
   },
   "files": [
     "lib"
