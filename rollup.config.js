@@ -1,4 +1,5 @@
 import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
 
 export default {
 	input: './lib/dimi.js',
@@ -7,5 +8,10 @@ export default {
 		file: 'dist/dimi.js',
 		format: 'iife'
 	},
-	plugins: [ resolve() ]
+	plugins: [
+		resolve(),
+		commonjs({
+			include: 'node_modules/**/*.js'
+		})
+	]
 };

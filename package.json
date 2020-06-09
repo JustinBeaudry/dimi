@@ -22,14 +22,15 @@
     "json-stringify-safe": "5.x.x"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "13.0.0",
+    "@rollup/plugin-node-resolve": "8.x.x",
     "braintree-jsdoc-template": "3.x.x",
     "jsdoc": "3.x.x",
     "jsdoc-plugin-npm": "1.x.x",
     "jsdoc-plugin-url": "1.x.x",
     "livereload": "0.x.x",
     "nodemon": "2.x.x",
-    "rollup": "2.x.x",
-    "@rollup/plugin-node-resolve": "8.x.x"
+    "rollup": "2.x.x"
   },
   "scripts": {
     "build:docs": "npx jsdoc -c .jsdoc.js",
