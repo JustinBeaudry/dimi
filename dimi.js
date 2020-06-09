@@ -15,6 +15,7 @@
  * @since 1.0.0
  * @param {Array<*>} array
  * @returns {object}
+ * @private
  */
 const arrayToObject = array => array.reduce((memo, datum) => {
 	Object.assign(memo, Array.isArray(datum) ? arrayToObject(datum) : datum)
