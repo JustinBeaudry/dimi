@@ -18,20 +18,18 @@
     "npm": ">=3.x.x"
   },
   "dependencies": {
-    "lodash.merge": "4.6.2",
-    "json-stringify-safe": "5.0.1"
+    "lodash.merge": "4.x.x",
+    "json-stringify-safe": "5.x.x"
   },
   "devDependencies": {
-    "braintree-jsdoc-template": "3.3.0",
-    "jsdoc": "3.6.4",
+    "braintree-jsdoc-template": "3.x.x",
+    "jsdoc": "3.x.x",
     "jsdoc-plugin-npm": "1.x.x",
     "jsdoc-plugin-url": "1.x.x",
-    "livereload": "0.9.1",
-    "nodemon": "1.18.10",
-    "rollup": "1.6.0",
-    "rollup-plugin-commonjs": "9.2.1",
-    "rollup-plugin-node-resolve": "4.0.1",
-    "rollup-plugin-uglify": "6.0.4"
+    "livereload": "0.x.x",
+    "nodemon": "2.x.x",
+    "rollup": "2.x.x",
+    "@rollup/plugin-node-resolve": "8.x.x"
   },
   "scripts": {
     "build:docs": "npx jsdoc -c .jsdoc.js",
